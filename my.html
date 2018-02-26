@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="uft-8">
+
+    <title>sort</title>
+    <script src="jquery-1.11.2.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <h3>快速排序</h3>
+    <p>把比基准数小的放在基准数的左边，比基准数大的放到右边； 然后以同样方式处理左右数组</p>
+    <p>取第一个数为基准数，第一个数为坑。定义两个指针，从右往左遍历，遇到比基准数小的，填入坑，挖坑，左指针右移，遇到比基准数大的，填入坑，挖坑，右指针左移；直到两个指针相等，将坑填上，返回指针</p>
+    <button type="text" style="display: inline-block" onclick="clickButton(0)">快速排序（挖坑法）</button>
+    <a>排序前[72,6,57,88,60,42,83,73,48,85] </a> <a>排序后<span id ="quickSort1"></span> </a>
+    <p>取？为基准数，定义两个指针。从头开始遍历，遇到比基准数大的停下，右指针开始左移，遇到比基准数小的停下，在left glt; right的情况下交换；如果相等，则将key与相遇值交换。</p>
+    <button type="text" style="display: inline-block" onclick="clickButton(1)">快速排序（前后指针法）</button>
+    <a>排序前[72,6,57,88,60,42,83,73,48,85] </a> <a>排序后<span id ="quickSort2"></span> </a>
+    <p>优化： 在递归到规模比较小时，使用选择排序/插入排序代替。 选取一个比较靠谱的pivot；（取first，取last，取middle，取三者的中）； 使用循环代替递归。
+    </p>
+
+    <h3>冒泡排序 O(n^2)</h3>
+    <p>从头开始，两两交换，将最大的沉底，再从0到n-1继续循环</p>
+    <button type="text" style="display: inline-block" onclick="bubbleSort()">冒泡排序</button>
+    <a>排序前[72,6,57,88,60,42,83,73,48,85] </a> <a>排序后<span id ="bubbleSort"></span> </a>
+
+    <h3>选择排序</h3>
+    <p>先将0-n个数里面最小的放到最前面，然后对1-n个数最小的放到第二个位置，以此类推；其实和冒泡排序有一点点相像，不同的是选择排序每次循环只是为了找到最小值，在循环结束时才会交换。</p>
+    <button type="text" style="display: inline-block" onclick="selectionSort()">选择排序</button>
+    <a>排序前[72,6,57,88,60,42,83,73,48,85] </a> <a>排序后<span id ="selectionSort"></span> </a>
+
+    <h3>插入排序</h3>
+    <p>基于最开始的一个有序元素从后往前插入</p>
+    <button type="text" style="display: inline-block" onclick="insertSort()">插入排序</button>
+    <a>排序前[72,6,57,88,60,42,83,73,48,85] </a> <a>排序后<span id ="insertSort"></span> </a>
+    <h3>二分查找</h3>
+    <button type="text" style="display: inline-block" onclick="aaa()">二分</button>
+
+    <script src="my.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
